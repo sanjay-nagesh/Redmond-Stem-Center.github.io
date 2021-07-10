@@ -189,6 +189,76 @@
       
     </section><!-- End About Section -->
 
+    <div class="container">
+      <div class="row">
+
+<div id="smart-button-container">
+  <div style="text-align: center;">
+    <div style="margin-bottom: 1.25rem;">
+      <select id="item-options"><option value="Web Development Camp" price="180">Web Development Camp - $180</option><option value="Rocketry Camp" price="200">Rocketry Camp - $200</option><option value="Robotics Camp" price="350">Robotics Camp - $350</option></select>
+    </div>
+  <div id="paypal-button-container"></div>
+  </div>
+</div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  ((containerId) => {
+    var itemOptions = document.querySelector("#item-options");
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'pay',
+      },
+      createOrder: (data, actions) => {
+        var selectedItemPrice = parseInt(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        return actions.order.create({
+          purchase_units: [{
+            description: "Item",
+            amount: {
+              currency_code: 'USD',
+              value: selectedItemPrice,
+              breakdown: {
+                item_total: {
+                  currency_code: 'USD',
+                  value: selectedItemPrice,
+                },
+                shipping: {
+                  currency_code: 'USD',
+                  value: 0,
+                },
+                tax_total: {
+                  currency_code: 'USD',
+                  value: 0,
+                }
+              }
+            },
+            items: [{
+              name: itemOptions.options[itemOptions.selectedIndex].value,
+              unit_amount: {
+                currency_code: 'USD',
+                value: selectedItemPrice,
+              },
+              quantity: 1
+            }]
+          }]
+        });
+      },
+      onApprove: (data, actions) => {
+        return actions.order.capture().then((details) => {
+          alert('Transaction completed by ' + details.payer.name.given_name + '!');
+        });
+      },
+      onError: (err) => {
+        console.log(err);
+      },
+    }).render(containerId);
+  })('#paypal-button-container');
+</script>
+
+      </div>
+    </div>
     
     <br>
     <div class="container">
@@ -244,7 +314,7 @@
               <div class="panel-heading" role="tab" id="headingFour">
                 <h4 class="panel-title">
                   <a class="collapsed"style="color:#171D21" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-                    What is class size?
+                    What is the expected class size?
                   </a>
                 </h4>
     
