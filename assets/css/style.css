@@ -915,8 +915,8 @@ svg {
 .abouthero-text {
   height: fit-content;
   text-align: right;
-  padding-left:40px;
-  padding-right:9vw;
+  padding-left: 40px;
+  padding-right: 9vw;
 }
 .abouthero-text h2 {
   margin-top: 2%;
@@ -1025,7 +1025,6 @@ svg {
   margin: 0 12px 30px;
 }
 
-
 /* Photo */
 
 .image-list-small li > a {
@@ -1038,13 +1037,12 @@ svg {
   padding: 0;
   border: 4px solid #ffffff;
   outline: 1px solid #d0d0d0;
-  box-shadow: 0 2px 1px #DDD;
+  box-shadow: 0 2px 1px #ddd;
 }
 
 .image-list-small .details {
   margin-top: 13px;
 }
-
 
 /* Title */
 
@@ -1422,7 +1420,7 @@ svg {
   background: #171d21;
   padding: 60px 0;
 }
-.teamRow{
+.teamRow {
   padding-left: 10%;
   padding-top: 3%;
   padding-right: 10%;
@@ -1460,7 +1458,8 @@ svg {
   color: #fff;
 }
 
-.member-info-content h4, span{
+.member-info-content h4,
+span {
   padding-top: 10px;
   color: white;
 }
@@ -1893,7 +1892,7 @@ svg {
   float: left;
 }
 
-#footer .copyright span{
+#footer .copyright span {
   color: #000;
 }
 
@@ -1918,27 +1917,27 @@ svg {
   }
 }
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #171d21 #f7f7f7;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #171d21 #f7f7f7;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #f7f7f7;
-    border-radius: 20px;
-  }
+*::-webkit-scrollbar-track {
+  background: #f7f7f7;
+  border-radius: 20px;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #2a3a49;
-    border-radius: 10px;
-    border: 3px solid #f7f7f7;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #2a3a49;
+  border-radius: 10px;
+  border: 3px solid #f7f7f7;
+}
 /* calendar */
 
 #calendar {
@@ -1949,7 +1948,6 @@ svg {
   display: flex;
   justify-content: center;
   padding-right: 30px;
-  padding-bottom: 30px;
   padding-left: 30px;
   margin-bottom: 8%;
   margin-left: auto;
@@ -1957,27 +1955,25 @@ svg {
   height: 50vh;
   overflow-y: auto;
   overflow-x: hidden;
-  
 }
 
-.fc tr{
-  margin-bottom:20px; 
+.fc tr {
+  margin-bottom: 20px;
 }
-.fc td{
-  margin-bottom:20px;
+.fc td {
+  margin-bottom: 20px;
   padding-left: 10px;
   width: fit-content;
-  height:10vh;
+  height: 10vh;
 }
-.fc th{
+.fc th {
   width: 30vw;
-  margin-bottom:20px;
-  
+  margin-bottom: 20px;
 }
-.fc tbody{
-  margin-bottom:20px;
+.fc tbody {
+  margin-bottom: 20px;
 }
-.fc tr:hover{
+.fc tr:hover {
   background-color: rgba(0, 0, 0, 0.247);
 }
 .fc-cell-shaded {
@@ -1985,15 +1981,19 @@ svg {
   border-top: #8eb897 solid 5px;
   border-radius: 10px;
   height: 10vh;
-  background: rgb(242,245,234);
-  background: linear-gradient(180deg, rgba(242,245,234,1) 55%, rgba(255,255,255,1) 55%);
+  background: rgb(242, 245, 234);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 245, 234, 1) 55%,
+    rgba(255, 255, 255, 1) 55%
+  );
   padding: 4px;
 }
-.fc-list-event-time{
+.fc-list-event-time {
   font-size: 20px;
   width: 50%;
 }
-.fc-list-day-text{
+.fc-list-day-text {
   color: black;
   float: left;
   width: 100%;
