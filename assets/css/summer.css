@@ -10,6 +10,17 @@ button {
     padding: 14px 24px;
     border: none;
     transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-    background: #FF5964;
+    background:#FF5964 ;
+    color: #fff;
+}
+
+hr {
+    height: 2px !important;
+    background: #fff;
+    border: none;
+    opacity: 100 !important;
+}
+
+#accordion {
     color: #fff;
 }
