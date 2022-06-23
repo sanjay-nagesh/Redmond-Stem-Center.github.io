@@ -8,37 +8,33 @@
   <meta content="The Redmond STEM Center is holding summer camps for students interested in web development, rocketry, and robotics." name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/AppleFavicon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">\
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DDY3BQ0JQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+  
       gtag('config', 'G-2DDY3BQ0JQ');
     </script> 
     <!-- MailerLite Universal -->
-  <script>
+    <script>
       (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
       var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
       f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
@@ -46,48 +42,53 @@
       _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
       
       var ml_account = ml('accounts', '2899750', 'v7x0o3h6b0', 'load');
-  </script>
+    </script>
     <!-- End MailerLite Universal -->
   
-</head>
-
+    <!-- Main CSS File -->
+    <link href="assets/css/engage.css" rel="stylesheet">
+    <link href="assets/css/summer.css" rel="stylesheet">
+  </head>
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="headerbs" class="fixed-top d-flex align-items-center headerbs-transparent">
-    <div class="container d-flex align-items-center">
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo mr-auto">
         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Activities</a></li>
-        <!--  <li><a href="#portfolio">Sponsors</a></li> -->    
-          <li><a href="#events">Events</a></li>  
-          <li><a href="#contact">Contact</a></li>
-          <li class="active"><a href="summercamps.html">Summer Camps</a></li>          
+      <nav id="navbar" class="nav-menu navbar nav-menuW">
+        <ul onclick="closeMobile()">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li class="active"><a href="/engage.html">Engage</a></li>    
+          <li><a href="/events.html">Events</a></li>  
+          <li><a href="/contact.html">Contact</a></li>           
           <li><a href="https://blog.redmondstemcenter.org/">Blog</a></li> 
-          <li><a href="javascript:;" onclick="ml_webform_3567916('show')">Newsletter</a></li> 
+          <li><a class="shine" href="https://www.paypal.com/donate/?hosted_button_id=VTSBCU7UZFPLN">Donate</a></li> 
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        <script>
+          function closeMobile(){
+            if (document.querySelector(".navbar").classList.contains('navbar-mobile')) {
+              document.querySelector('.navbar').classList.toggle('navbar-mobile');
+              document.querySelector('.mobile-nav-toggle').classList.toggle('bi-list');
+              document.querySelector('.mobile-nav-toggle').classList.toggle('bi-x');
+            }
+          }
+        </script>
       </nav><!-- .nav-menu -->
   
-      </div>
-    </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="herobs">
-    <div class="herobs-container">
-      <!--<h6 class="title">Redmond<span class="highlight"> STEM </span>Center</h6>-->
-      <img class="img-fluid" src="assets/img/text.svg" width="700"> 
-        </div>
-      </div>
-      
     </div>
-  </section><!-- End Hero -->
+  </header><!-- End Header -->
+  <section id="head" class="aboutHead">
+    <div class="abouthero-text">
+        <h2>Summer Camps</h2>
+    </div>
+    <img class="imgshine" src="../assets/img/screws.png">
+  </section>
 
 
   <main id="main">
@@ -102,9 +103,9 @@
               <h1 style="color: #F2F5EA">Web Development Camp</h2>
             </div>
             <div class="iframe-container">
-              <h4 style="color:#EAD7E1;">July 19th - 22nd from 9AM - 3PM</h4>
-              <h6 style="color:white;">Located at the DigiPen Institute of Technology</h6>  
-              <button class='two' style="margin-top: 3%;">Registration Closed</button>
+              <h4 style="color:#EAD7E1;">July 18th - 22nd from 10AM - 3PM</h4>
+              <h6 style="color:white;">Located at the Redmond STEM Center</h6>  
+              <button class='two' style="margin-top: 3%;" onclick="window.location.href='https://forms.gle/L3aUNnH4WDrvdtJy7'" >Register for this camp!</button>
             </div>
             
         </div>
@@ -128,6 +129,17 @@
 
       <div class="containerrocket">
         <div class="row content">
+          <div class="col-lg-6">
+            <div class="aboutTitle">
+              <h1 style="color: #F2F5EA; text-align: left;">Rocketry Camp</h2>
+            </div>
+            <div class="iframe-container">
+              <h4 style="color:#EAD7E1; text-align: left;">August 15th - 19th from 10AM - 3PM</h4>
+              <h6 style="color:white; text-align: left;">Located at the DigiPen Institute of Technology</h6>  
+              <button class='two' style="margin-top: 3%;" onclick="window.location.href='https://forms.gle/L3aUNnH4WDrvdtJy7'" >Register for this camp!</button>
+               </div>
+
+        </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <div class="container">
               <p>
@@ -140,17 +152,7 @@
             </div>
         </div>
 
-          <div class="col-lg-6">
-            <div class="aboutTitle">
-              <h1 style="color: #F2F5EA; text-align: right;">Rocketry Camp</h2>
-            </div>
-            <div class="iframe-container">
-              <h4 style="color:#EAD7E1; text-align: right;">July 23rd - 26th from 9AM - 3PM</h4>
-              <h6 style="color:white; text-align: right;">Located at the DigiPen Institute of Technology</h6>  
-              <button class='three' style="margin-top: 3%;">Registration Closed</button>
-               </div>
-
-        </div>
+          
         </div>
       </div>
 
@@ -163,9 +165,9 @@
               <h1 style="color: #F2F5EA">Robotics Camp</h2>
             </div>
             <div class="iframe-container">
-              <h4 style="color:#EAD7E1;">August 16th - 20th from 9AM - 4PM</h4>
-              <h6 style="color:white;">Located at the DigiPen Institute of Technology</h6>  
-              <button class='four' style="margin-top: 3%;" onclick="location.href='https://forms.gle/rhHVQX7bSw8YWN4b6';">Register for this camp!</button>
+              <h4 style="color:#EAD7E1;">August 1st - 5th from 10AM - 3PM</h4>
+              <h6 style="color:white;">Located at the Redmond STEM Center</h6>  
+              <button class='four' style="margin-top: 3%;" onclick="location.href='https://forms.gle/L3aUNnH4WDrvdtJy7'">Register for this camp!</button>
             </div>
             
         </div>
