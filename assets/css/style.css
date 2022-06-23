@@ -1939,7 +1939,7 @@ span {
   border: 3px solid #f7f7f7;
 }
 /* calendar */
-
+/*
 #calendar {
   font-family: "Wavehaus", sans-serif;
   font-size: x-large;
@@ -2008,4 +2008,28 @@ span {
 .fc-list-day-text:hover,
 .fc-list-day-side-text:hover {
   color: black;
+} */
+
+.fc {
+  color: #f2f5ea;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #5e57576b;
+}
+
+.fc-daygrid-event-dot {
+  border: 4px solid #8eb897;
+  border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid #8eb897;
+}
+
+.fc a {
+  color: #f2f5ea;
+}
+
+.fc .btn-primary {
+  background-color: #8eb897 !important;
+  border: #8eb897 !important;
+  font-size: large;
+  color: rgb(14, 17, 19);
 }
