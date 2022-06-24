@@ -352,6 +352,22 @@ function cardMouseLeave(event) {
   event.currentTarget.style.transform = `perspective(${tiltEffectSettings.perspective}px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
   setTransition(event);
 }
+$(function() {
+  $('.acc_ctrl').on('click', function(e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).next()
+      .stop()
+      .slideUp(300);
+    } else {
+      $(this).addClass('active');
+      $(this).next()
+      .stop()
+      .slideDown(300);
+    }
+  });
+});
 
 function setTransition(event) {
   const card = event.currentTarget;
