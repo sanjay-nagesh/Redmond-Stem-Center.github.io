@@ -7,6 +7,25 @@
 (function() {
   "use strict";
 
+  
+const main = $('html');
+
+// The scrollTop function
+// scrolls to the top
+function scrollTop() {
+    console.log('scrolling to top')
+    main.animate({scrollTop: 0},2000,"linear",scrollBottom /* this is a callback it means when we are done scrolling to the top, scroll to the bottom */)
+}
+
+function scrollBottom() {
+    console.log('scrolling to bottom')
+    main.animate({scrollTop: document.body.offsetHeight},2000,"linear",scrollTop /* this is a callback it means when we are done scrolling to the bottom, scroll to the top */)
+}
+
+// this kicks it off
+// again only running $(document).ready once to increase performance.
+// Once scrollTop completes, it calls scrollBottom, which in turn calls scrollTop and so on
+$(document).ready(scrollTop);
   /**
    * Easy selector helper function
    */
@@ -352,22 +371,6 @@ function cardMouseLeave(event) {
   event.currentTarget.style.transform = `perspective(${tiltEffectSettings.perspective}px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
   setTransition(event);
 }
-$(function() {
-  $('.acc_ctrl').on('click', function(e) {
-    e.preventDefault();
-    if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
-      $(this).next()
-      .stop()
-      .slideUp(300);
-    } else {
-      $(this).addClass('active');
-      $(this).next()
-      .stop()
-      .slideDown(300);
-    }
-  });
-});
 
 function setTransition(event) {
   const card = event.currentTarget;
@@ -377,3 +380,4 @@ function setTransition(event) {
     card.style.transition = "";
   }, tiltEffectSettings.speed);
 }
+

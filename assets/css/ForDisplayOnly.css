@@ -264,7 +264,8 @@ p,
 }
 
 #header.header-scrolled {
-  background: #0e1113;
+  /* background: #0e1113; FOR DISPLAY ONLY DO NOT USE!!!!*/
+  background: #ead7e1;
   padding: 15px 0;
 }
 #header.header-transparent .nav-menu a {
@@ -2074,7 +2075,8 @@ svg {
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 10px;
+    /* width: 10px; DELETE THESE COMMENTS DO NOT PUSH WITHOUT DELETE. FOR DISPLAY ONLY */
+    width: 0px;
   }
 
   *::-webkit-scrollbar-track {
